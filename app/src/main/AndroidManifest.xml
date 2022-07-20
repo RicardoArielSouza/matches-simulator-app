@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.dio.simulator">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,11 +16,6 @@
         android:theme="@style/Theme.simulator"
         tools:targetApi="31">
         <activity
-            android:name=".ui.DetailActivity"
-            android:theme="@style/Theme.simulator.NoActionBar"
-            android:exported="true">
-        </activity>
-        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -29,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.DetailActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.simulator.NoActionBar" />
     </application>
 
 </manifest>
